@@ -35,7 +35,7 @@
     position: relative;
     width: 100%;
     height: 200px; /* Adjust as needed */
-    margin-top: -120px;
+    margin-top: -60px;
 }
 
 .scroll-text {
@@ -136,8 +136,14 @@
 .container img{
     width:80%;
     margin-left: 10vw;
-
+       transition: transform 0.3s ease;
 }
+
+.container:hover {
+    transform: scale(1.05); /* Zooms in the image on hover */
+}
+
+
 
 .container2 {
     display: block;
@@ -317,7 +323,13 @@
     width: 20%; /* Each image takes up approximately one-third of the row */
     height: auto; /* This keeps the image aspect ratio intact */
     padding: 5px; /* Optional: Adds some space around the images */
+        transition: transform 0.3s ease;
 }
+
+.image-row img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
 
   .container5 {
     display: flex;
@@ -353,6 +365,99 @@
         font-weight: 400;
 }
 
+
+/* Optional: Adjusting image sizes */
+.image-column5 img {
+    width: 120%; /* Adjust based on your preference */
+    height: auto;
+}
+
+
+  .container5 {
+    display: flex;
+    padding: 150px;
+    box-sizing: border-box;
+}
+
+.column5 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-column5 img, .tiny-image-column5 img {
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+
+.zoomable:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.tiny {
+    width: 80px; /* Adjust size for the tiny image */
+    height: auto;
+}
+
+.text-column5 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+      font-size: 45px; /* Adjust size as needed */
+        font-weight: 400;
+}
+
+
+/* Optional: Adjusting image sizes */
+.image-column5 img {
+    width: 120%; /* Adjust based on your preference */
+    height: auto;
+}
+
+
+  .container56 {
+    display: flex;
+    padding-left: 300px;
+     padding-right: 300px;
+    box-sizing: border-box;
+    padding-bottom: 60px;
+}
+
+.column56 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-column56 img, .tiny-image-column56 img {
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+
+.zoomable:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.tiny {
+    width: 40px; /* Adjust size for the tiny image */
+    height: auto;
+}
+
+.text-column56 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+      font-size: 30px; /* Adjust size as needed */
+        font-weight: 400;
+}
+
+
+/* Optional: Adjusting image sizes */
+.image-column56 img {
+    width: 80%; /* Adjust based on your preference */
+    height: auto;
+}
+
 .text-column55 {
     font-family: 'TT Norms Pro', sans-serif;
     color: white;
@@ -363,11 +468,6 @@
         margin-bottom: -30px;
 }
 
-/* Optional: Adjusting image sizes */
-.image-column5 img {
-    width: 120%; /* Adjust based on your preference */
-    height: auto;
-}
 
 
 .gallery-container {
@@ -383,6 +483,11 @@
     margin: 75px; /* Half of the specified padding for even spacing */
     border-radius: 20px;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
     </style>
@@ -529,10 +634,67 @@ In those moments, the lack of resources made even a full-sized soccer field seem
 
 </div>
 
-  <div class="container2">
-            <img src="p1.png" alt="Right Image">
-                <img src="p2.png" alt="Right Image">
+
+
+<div class="container56">
+    <div class="column56 text-column56">
+        <p>Lovely co-workers</p>
     </div>
+
+     <div class="column56 tiny-image-column56">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+    <div class="column56 image-column56">
+        <img src="work.jpeg" alt="Left Image" class="zoomable">
+    </div>
+   
+</div>
+
+<div class="container56">
+    <div class="column56 image-column56">
+        <img src="lab2.jpeg" alt="Left Image" class="zoomable">
+    </div>
+
+     <div class="column56 tiny-image-column56">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+
+      <div class="column56 text-column56">
+        <p>Conducted environmental agriculture labs in partnership with Addis Ababa University</p>
+    </div>
+   
+</div>
+
+<div class="container56">
+    <div class="column56 text-column56">
+        <p>Taught Business and Enterpunership workshops every month to rising high school seniors</p>
+    </div>
+
+     <div class="column56 tiny-image-column56">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+    <div class="column56 image-column56">
+        <img src="business.jpeg" alt="Left Image" class="zoomable">
+    </div>
+   
+</div>
+
+<div class="container56">
+    <div class="column56 image-column56">
+        <img src="wood.jpeg" alt="Left Image" class="zoomable">
+    </div>
+
+     <div class="column56 tiny-image-column56">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+
+      <div class="column56 text-column56">
+        <p>Started the first wood-work club at my HS!</p>
+    </div>
+   
+</div>
+
+
 
 <br>
 <br>
@@ -553,7 +715,7 @@ In those moments, the lack of resources made even a full-sized soccer field seem
         <img src="curly.png" alt="Middle Image" class="zoomable tiny">
     </div>
     <div class="column5 image-column5">
-        <img src="pulse.jpeg" alt="Left Image" class="zoomable">
+        <img src="super.png" alt="Left Image" class="zoomable">
     </div>
    
 </div>
@@ -629,7 +791,7 @@ In those moments, the lack of resources made even a full-sized soccer field seem
 </div>
 
  <div id="impossible2">
-                       <h3>Thats what I hope to contibute to the team! </h3>
+                       <h3>That's what I hope to contibute to the team! </h3>
 
 </div>
 
