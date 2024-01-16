@@ -1,0 +1,1221 @@
+/* Additional CSS for sparkles */
+@font-face {
+    font-family:"Sans-Serif";
+    src:url("Garet-Book.ttf");
+}
+
+
+.sparkle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('star.png'); /* Replace with the path to your sparkle image */
+    background-size: contain;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.7;
+    transition: opacity 1s ease-out;
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    padding-top: 40px;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.logo img:hover {
+    transform: scale(1.2); /* Zoom out effect */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: linear-gradient(80deg, black, black); /* Updated colors */
+    overflow: auto;
+    font-family: 'poppins';
+    background-color: black;
+}
+
+#up, #down, #left, #right {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+
+#up {
+    height: 800px;
+    width: 800px;
+    background-image: linear-gradient(80deg, #0ABAB5, black);
+    animation: down 40s infinite;
+}
+
+#down {
+    right: 0;
+    height: 500px;
+    width: 500px;
+    background-image: linear-gradient(80deg, black, #005A9C);
+    animation: up 30s infinite;
+}
+
+#left {
+    height: 500px;
+    width: 500px;
+    background-image: linear-gradient(80deg, black, black);
+    animation: left 30s 1s infinite;
+}
+
+#right {
+    height: 500px;
+    width: 500px;
+    background-image: linear-gradient(80deg, #005A9C, rgba(26, 178, 138, 0.5));
+    animation: right 40s 0.5s infinite;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    padding: 20px 30px;
+    color: #fff;
+        font-family: 'TT Norms Pro', sans-serif;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+      transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-list li:hover {
+    transform: scale(1.1); /* Zoom out effect */
+}
+
+.nav-list li {
+    margin: 0 20px;
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.nav-list button {
+    padding: 10px 20px;
+    margin: 0 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-family: inherit;
+    transition: alnav-listl ease-in 0.4s;
+}
+
+.nav-list button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#details {
+    min-height: 80vh;
+    z-index: 999;
+    text-align: left;
+    color: #ebe7e7;
+    padding-left: 150px;
+     padding-top: 300px; 
+     margin-bottom: -250px;
+}
+
+
+#details span {
+    font-family: 'TT Norms Pro', sans-serif;
+    font-size: 90px;
+    font-weight: 450;
+    color: #ebe7e7;
+}
+
+#details p {
+    font-family: 'TT Norms Pro', sans-serif;
+    font-size: 30px;
+    color: #ebe7e7;
+    font-weight: 200;
+}
+
+
+
+.social-icons {
+    position: relative;
+    text-align: center;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+@keyframes down {
+    0%, 100% { top: -100px; }
+    50% { top: 100px; } /* Adjusted value */
+}
+
+
+@keyframes up {
+    0%, 100% {
+        bottom: -100px;
+    }
+    50% {
+        bottom: 700px;
+    }
+}
+
+@keyframes left {
+    0%, 100% {
+        left: -100px;
+    }
+    50% {
+        left: 1300px;
+    }
+}
+
+@keyframes right {
+    0%, 100% {
+        right: -100px;
+    }
+    50% {
+        right: 1300px;
+    }
+}
+
+.animated-gradient {
+    width: 100%;
+    height: 800px;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.two-column-layout {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0px;
+  min-height: 900px;
+}
+
+.column {
+  flex: 1;
+  margin: 0px;
+  background-color: black;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for individual items */
+#item1, #item2, #item3,#item4,#item5, #item6{
+  padding: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: black; /* Base background color */
+  color: white; /* Base text color */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; 
+  font-family: 'TT Norms Pro', sans-serif;
+  font-size: 20px;
+
+
+}
+
+#item1:hover, #item2:hover, #item3:hover, #item4:hover, #item5:hover, #item6:hover {
+    transform: scale(1.1);
+    opacity: 0.4; /* If you want to keep the opacity change on hover */
+}
+
+
+/* Hover effect for each item */
+#item1:hover{
+    background-color: rgb(251,190,79,0.4);/* Hover background color */
+    opacity: 0.4;
+}
+
+#item2:hover{
+    background-color: rgb(116,107,171,0.4); /* Hover background color */
+    opacity: 0.4;
+}
+
+#item3:hover{
+    background-color: rgb(74,98,216,0.4); /* Hover background color */
+    opacity: 0.4;
+}
+
+#item4:hover{
+    background-color: rgb(118,208,192,0.4); /* Hover background color */
+    opacity: 0.4;
+}
+
+#item5:hover{
+    background-color: rgb(26,178,138,0.4); /* Hover background color */
+    opacity: 0.4;
+}
+
+#item6:hover{
+    background-color: rgb(251,190,79,0.4); /* Hover background color */
+    opacity: 0.4;
+}
+
+/* Active class style */
+#item1.active {
+  background-color: rgb(251,190,79);
+}
+
+#item2.active {
+   background-color: rgb(116,107,171);
+}
+
+#item3.active {
+  background-color: rgb(74,98,216);
+
+}
+
+#item4.active {
+  background-color: rgb(118,208,192);
+
+}
+
+
+#item5.active {
+  background-color: rgb(26,178,138);
+
+}
+
+#item6.active {
+  background-color: rgb(251,190,79);
+
+}
+
+
+/* Styling for the content area */
+#contentArea {
+  padding: 5px;
+  background-color: black;
+  border-radius: 5px;
+  min-height: 150px; /* Ensures the box is visible even when empty */
+  margin-top: 140px;
+  width: 750px;
+}
+
+.two-column-layout h2 {
+    font-family: 'TT Norms Pro', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 50px;
+    text-align: left;
+    color: white;
+
+}
+
+#column1{
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 80px;
+    margin-left: 70px;
+    width: 30%;
+}
+
+#column2{
+    padding-left: 50px;
+    padding-right: 70px;
+    padding-top: 80px;
+    width: 70%;
+}
+
+.info-section {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.info-section a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* Change to your desired color */
+}
+
+.info-section p{
+    font-weight: 30;
+    opacity: 0.8;
+}
+
+.info-section h2, .info-section h1 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: #333;
+    font-weight: normal;
+    font-size: 50px;
+    border-bottom: 0.5px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 16px;
+    line-height: 1.6;
+      padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    width: 535px;
+
+}
+
+
+.contact-info .icon {
+    font-style: normal; /* Use this to reset any font-awesome icons if used */
+}
+
+.credits {
+    font-size: 14px;
+    color: #999;
+    margin-top: 40px;
+}
+
+.credits .icon {
+    font-style: normal; /* Use this to reset any font-awesome icons if used */
+}
+
+#mini{
+     padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    padding-bottom: 80px;
+    width: 535px;
+    color: white;
+    background-color: black;
+}
+
+#mini h2{
+    margin-left: 65px;
+    font-size: 70px;
+    color: white;
+}
+
+#mini h3{
+    margin-left: 65px;
+    font-size: 19px;
+    font-weight: 30;
+}
+
+.description{
+    font-size: 15px;
+}
+
+/* ... (existing styles) ... */
+
+.contact-item {
+  padding: 25px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  border: 1px solid transparent; /* Add a transparent border to maintain layout on hover */
+  border-top: 1px solid black;
+}
+
+.contact-item:hover {
+  border: 1px solid darkgrey; /* Add border to match the interactive box */
+  transform: scale(1.1);
+}
+
+.icon{
+     transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+    padding: 25px;
+      margin: 5px 0;
+        cursor: pointer;
+}
+
+.icon:hover {
+  border: 1px solid darkgrey; /* Add border to match the interactive box */
+  transform: scale(1.1);
+}
+
+
+
+
+
+#typed-text {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+
+.me {
+    position: absolute; /* Position the element absolutely */
+    top: 0; /* Anchor to the top */
+    right: 0; /* Anchor to the right */
+    z-index: 10; /* Ensure it's above other content, adjust the z-index as needed */
+    padding-right: 40px;
+    padding-top: 120px;
+     cursor: pointer; 
+}
+
+.me img {
+    display: block; /* Remove any default inline spacing */
+    max-width: 100%; /* Optional: ensures the image is responsive and doesn't overflow the screen */
+    height: 120px;
+     transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+  display: block; /* Ensures the image is a block-level element and takes up the fu*/
+}
+
+.me img:hover {
+  transform: scale(1.1); /* Increase the scale to 1.1, adjust number to increase or decrease zoom */
+}
+.item1-content {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+.item1-content h2 {
+    font-size: 45px; /* Adjust size as needed */
+    font-weight: 450;
+    margin-top: -5px;
+    margin-bottom: -30px; /* Ensures no gap between `h2` and the paragraph */
+    flex: 0 0 100%; /* Don't allow the header to grow or shrink */
+}
+
+.item1-content p {
+    order: 2; /* The paragraph will follow after the image */
+    font-size: 20px;
+    font-weight: 20;
+    width: 100%; /* Ensures paragraph takes full width */
+    margin-bottom: 30px;
+}
+
+
+.item1-first-image {
+    align-self: flex-end; /* Aligns the image to the right */
+    order: 1; /* Image will be placed between the `h2` and `p` */
+    width: 350px; /* Adjusted width as requested */
+    margin-top: -350px;
+    margin-right: -50px;
+
+}
+
+.item1-second-image {
+    order: 3; /* Ensures this image comes last */
+    width: 350px; /* Adjusted width as requested */
+}
+.item1-third-image {
+    order: 4; /* Ensures this image comes last */
+    width: 250px; /* Adjusted width as requested */
+    margin-left: 430px;
+    margin-top: -200px;
+}
+
+.item2-content {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the flex container */
+}
+
+#item2-content h2 {
+    font-size: 45px; /* Adjust size as needed */
+    font-weight: 450;
+    margin-top: -5px;
+    margin-bottom: 10px
+    flex: 0 0 100%; /* Don't allow the header to grow or shrink */
+}
+
+
+
+.slide p {
+    font-family: 'TT Norms Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 20;
+    width: 100%; /* Ensures paragraph takes full width */
+    margin-bottom: 30px;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Hide all slides initially */
+.slide {
+    display: none;
+}
+
+/* Display the first slide by default */
+#slides-container .slide:first-child {
+    display: block;
+}
+
+.item3-content p{
+    font-family: 'TT Norms Pro', sans-serif;
+    font-size: 20px;
+    font-weight: 20;
+    color: white;
+}
+
+/* Styling for the slideshow buttons */
+.slideshow-button {
+    cursor: pointer;
+    /* Add any additional styling you need */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    width: 50px; /* Adjust as per your design */
+    height: auto;
+     animation: zoomInOut 3s infinite alternate;
+}
+
+.slideshow-button2{
+    cursor: pointer;
+    /* Add any additional styling you need */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    width: 15px; /* Adjust as per your design */
+    height: auto;
+     animation: zoomInOut 3s infinite alternate;
+     margin-left: -20p;
+  
+
+}
+
+.slideshow-button2:hover {
+    animation: none; /* Stop the animation on hover */
+    transform: scale(1.4); /* Zoom in on hover */
+}
+
+#buttons {
+    position: relative; /* Establishes a new positioning context */
+    padding-bottom: 20px; /* Adjust to your required bottom padding */
+    /* Add any additional styles you need for the container */
+}
+
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Zoom in 20% */
+    }
+}
+
+.slideshow-button:hover {
+    animation: none; /* Stop the animation on hover */
+    transform: scale(1.4); /* Zoom in on hover */
+}
+
+
+/* Adjust the container margin if needed */
+#slides-container {
+    margin-bottom: 0px;
+}
+
+/* Positioning for the 'Next' button */
+#next-slide {
+    margin-top: -5px;
+    margin-left: 680px; /* Adjust this as per your layout */
+}
+
+#castle{
+    width: auto;
+    height: 190px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#castle:hover {
+    transform: scale(1.2); /* Zoom-in effect */
+}
+
+#mickey{
+     width: auto;
+    height: 190px;
+    border-radius: 50%;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+
+}
+
+#mickey:hover {
+    transform: scale(1.2); /* Zoom-in effect */
+}
+
+#poppins{
+     width: auto;
+    height: 190px;
+    border-radius: 50%;
+       margin-left: 40px;
+       margin-right: 40px;
+       transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#poppins:hover {
+    transform: scale(1.2); /* Zoom-in effect */
+}
+
+.environment{
+    width: 95px;
+    align-items: center;
+    margin-right: 50px;
+}
+
+#spiderman{
+    width:740px;
+    height: auto;
+}
+
+.item4-content {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+      padding-right: 150px;
+      padding-top: 340px;
+}
+
+.item4-content h2 {
+    font-size: 45px; /* Adjust size as needed */
+    border-bottom: solid 1px white;
+    padding-bottom: 40px;
+    font-weight: 450;
+     margin-top: -5px;
+    margin-bottom: 10px
+    flex: 0 0 100%; /* Don't allow the header to grow or shrink */
+}
+
+.item4-content h3 {
+    font-size: 30px; /* Adjust size as needed */
+    font-weight: normal;
+     margin-top: 60px;
+}
+
+.item4-content h4 {
+    font-size: 16.5px; /* Adjust size as needed */
+    font-weight: 80;
+    margin: 4px;
+}
+
+.item4-content p {
+    order: 2; /* The paragraph will follow after the image */
+    font-size: 20px;
+    font-weight: 20;
+    width: 100%; /* Ensures paragraph takes full width */
+    margin-bottom: 30px;
+}
+
+.item4-content2 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+      padding-right: 150px;
+ margin-top: 160px;
+}
+
+.item4-content2 h2 {
+    font-size: 45px; /* Adjust size as needed */
+    border-bottom: solid 1px white;
+    padding-bottom: 40px;
+    font-weight: 450;
+     margin-top: -5px;
+    margin-bottom: 10px
+    flex: 0 0 100%; /* Don't allow the header to grow or shrink */
+}
+
+.item4-content2 h3 {
+    font-size: 30px; /* Adjust size as needed */
+    font-weight: normal;
+     margin-top: 60px;
+}
+
+.item4-content2 h4 {
+    font-size: 16.5px; /* Adjust size as needed */
+    font-weight: 80;
+    margin: 4px;
+}
+
+.item4-content2 p {
+    order: 2; /* The paragraph will follow after the image */
+    font-size: 20px;
+    font-weight: 20;
+    width: 100%; /* Ensures paragraph takes full width */
+    margin-bottom: 30px;
+}
+
+.experience{
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 100px;
+}
+
+.experience img{
+    width: 740px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.experience:hover {
+    transform: scale(1.03); /* Zoom-in effect */
+}
+
+.item5-content h2 {
+    font-size: 45px; /* Adjust size as needed */
+    border-bottom: solid 1px white;
+    padding-bottom: 40px;
+    font-weight: 450;
+     margin-top: -5px;
+    margin-bottom: 10px
+    flex: 0 0 100%; /* Don't allow the header to grow or shrink */
+}
+
+.item5-content {
+    display: flex;
+    flex-direction: column;
+    font-family: 'TT Norms Pro', sans-serif;
+      padding: 150px;
+}
+
+.stuff {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    margin-left: 90px;
+    margin-bottom: 30px;
+    padding-top: 42px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.stuff img {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 55%; /* Adjust the width as needed */
+    margin-right: 60px; /* Adds spacing between the image and the text */
+    margin-left: -90px;
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.stuff:hover {
+    transform: scale(1.03); /* Zoom-in effect */
+}
+
+.stuff img:hover {
+    transform: scale(1.01) rotate(3deg); /* Zoom-in effect */
+}
+
+.text-content {
+    flex-grow: 1; /* Allows the text content to fill the remaining space */
+}
+
+.text-content h4 {
+    margin-top: 14px;
+    color: #255f3f; /* Sets the color of h4 to dark green */
+    font-size: 15 px;
+
+}
+
+.text-content p {
+    color: rgb(177,177,177,0.5); /* Sets the color of p to light gray */
+    font-style: italic; /* Italicizes the text */
+    margin-bottom: -55px;
+}
+
+.text-content h5 {
+    color: lightgray; /* Sets the color of p to light gray */
+    font-weight: 10;
+    font-size: 17px;
+    margin-top: -10px;
+}
+
+.text-content h3 {
+    color: white; /* Sets the color of h4 to dark green */
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -10px;
+}
+
+#photor img{
+    height: 500px;
+    width: auto;
+}
+
+#textnow{
+    padding: 30px;
+    margin-left: -150px;
+    font-weight: bolder;
+}
+
+#photor2{
+    width: 700px;
+    margin-left: 70px;
+}
+
+
+.stuff2 {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    margin-left: 90px;
+    margin-bottom: 30px;
+    padding-top: 42px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.stuff2 img {
+    flex-shrink: 0; /* Prevents the image from shrinking */
+    width: 55%; /* Adjust the width as needed */
+    margin-right: 60px; /* Adds spacing between the image and the text */
+    margin-left: -90px;
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.stuff2:hover {
+    transform: scale(1.03); /* Zoom-in effect */
+}
+
+.stuff2 img:hover {
+    transform: scale(1.01) rotate(3deg); /* Zoom-in effect */
+}
+
+.text-content2 {
+    flex-grow: 1; /* Allows the text content to fill the remaining space */
+}
+
+.text-content2 h4 {
+    margin-top: 14px;
+    color: white; /* Sets the color of h4 to dark green */
+    font-size: 15 px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+}
+
+.text-content2 p {
+    color: rgb(177,177,177,0.5); /* Sets the color of p to light gray */
+    font-style: italic; /* Italicizes the text */
+    margin-bottom: -55px;
+    font-size: 15.5px;
+    font-weight: normal;
+}
+
+.text-content2 h5 {
+    color: lightgray; /* Sets the color of p to light gray */
+    font-weight: 10;
+    font-size: 17px;
+    margin-top: -10px;
+}
+
+
+
+.text-content2 h3 {
+    color: white; /* Sets the color of h4 to dark green */
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -10px;
+}
+
+.text-content22 h3 {
+    color: white; /* Sets the color of h4 to dark green */
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -10px;
+    padding-left: 300px;
+ 
+}
+
+.text-content223 h3 {
+    color: white; /* Sets the color of h4 to dark green */
+    font-size: 38px;
+    font-weight: normal;
+    margin-top: -260px;
+    margin-bottom: -150px;
+    padding-left: 300px;
+ 
+}
+
+
+
+
+.item6-content h2 {
+    font-size: 45px; /* Adjust size as needed */
+    font-weight: 450;
+     margin-top: -15px;
+    margin-bottom: 10px
+    flex: 0 0 100%; /* Don't allow the header to grow or shrink */
+    width: 100%;
+    background-color: black;
+    padding-bottom: 20px;
+    color: white;
+font-family: 'TT Norms Pro', sans-serif;
+text-align:center ;
+}
+
+
+.item6-content ul {
+      font-family: 'TT Norms Pro', sans-serif;
+      color: white;  
+}
+
+.item6-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Add wrap to handle responsiveness */
+
+}
+
+#promo{
+    margin-top: -100px;
+}
+
+
+.bring {
+    flex: 1;  /* Each column takes up equal space */
+    margin: 0 10px;  /* Space between columns */
+    text-align: left;  /* Center-align the content */
+    width:50px; /* Minimum width for each column to maintain layout */
+    padding-right: 30px;
+    padding-bottom: 30px;
+
+}
+
+
+
+.bring {
+    /* Your existing styles for .bring */
+    position: relative;
+    overflow: hidden; /* Ensures the pseudo-elements are clipped to the element's bounds */
+}
+
+.bring::before, .bring::after {
+    content: '';
+    position: absolute;
+    background: #fff; /* Your desired border color */
+    left: 0;
+    right: 0;
+    height: 1px; /* Border thickness */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease; /* Smooth transition for the transform */
+}
+
+/* Top border */
+.bring::before {
+    top: 0;
+}
+
+a{
+    text-decoration: none !important;
+    color: white;
+}
+
+/* Bottom border */
+.bring::after {
+    bottom: 0;
+    transform-origin: right; /* Origin from the right for the bottom border */
+}
+
+.bring:hover::before, .bring:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+.bring img {
+    padding-top: 20px;
+    width: 80px;  /* Ensure the image doesn't overflow the column */
+    height: auto;
+    margin-bottom: 10px;  /* Space below the image */
+    margin-left: 74px;
+     transition: transform 0.5s ease; /* Smooth transition for the transform */
+}
+
+.bring img:hover {
+transform: scale(1.08); /* Zoom-in effect */
+}
+
+
+.bring h3 {
+    margin-bottom: 10px;  /* Space below the heading */
+     font-family: 'TT Norms Pro', sans-serif;
+      color: white; 
+        text-align: center;  /* Center-align the content */
+        padding-left: 40px;
+}
+
+.bring ul {
+    text-align: left;  /* Align list text to the left */
+    list-style: none;  /* Place bullet points inside */
+    font-weight: 20;
+    font-size: 18px;
+}
+
+.bring li {
+  margin-bottom: 20px;
+}
+
+
+#testey{
+    margin-top: -375px;
+    margin-left: -325px;
+ 
+}
+
+#testey2{
+    margin-top: 64px;
+    margin-left: -325px;
+    padding-bottom: 30px;
+}
+
+#testey3{
+    margin-top: 35px;
+    margin-left: -325px;
+    padding-bottom: 30px;
+}
+
+#spacing{
+    padding-top: 48px;
+        transition: filter 0.3s ease; 
+        filter: brightness(0.5) sepia(1) hue-rotate(180deg) saturate(5); /* Adjust color filter */
+
+}
+
+#spacing2{
+    padding-top: 40px;
+        transition: filter 0.3s ease; 
+        filter: brightness(0.7) sepia(1) hue-rotate(270deg) saturate(2); /* Creates a purple tint */
+}
+
+#love{
+      transition: filter 0.3s ease; 
+       filter: brightness(0.5) sepia(1) hue-rotate(90deg) saturate(3); 
+
+}
+
+
+#yes{
+    width: 30px;
+    margin-left: 340px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+#blue{
+    color: rgb(19,89,149);
+}
+
+#purple{
+   color: rgb(99,0,186)
+}
+
+.hidden{
+     display: none;
+}
+.image-container {
+    position: relative; /* Parent container for absolute positioning */
+    width: 100%; /* Set width */
+    height: auto; /* Set height */
+}
+
+.image-container img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#mainImage {
+    /* Position the main image as needed */
+    position: absolute;
+    top: -660px; /* Adjust as needed */
+    left: 1070px; /* Adjust as needed */
+    width: 200px;
+    transform: rotate(25deg); /* Adjust the degree to your preference */
+}
+
+#mainImage:hover {
+    transform: scale(1.1);
+}
+
+#hiddenImages {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#hiddenImages img {
+    position: absolute; /* Absolute positioning */
+    transition: transform 0.3s ease; /* For the zoom effect */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Individual positioning for each hidden image */
+#image1 { top: -150px; left: 900px; width: 250px; transition: transform 0.3s ease; }
+#image2 { top: -340px; right: 600px; width: 200px;  transition: transform 0.3s ease;}
+#image3 { bottom: 500px; left: 700px; width: 200px;  transition: transform 0.3s ease;}
+#image4 { bottom: 200px; right: 80px; width: 200px;  transition: transform 0.3s ease;}
+#image5 { bottom: -50px; right: 1000px; width: 200px;  transition: transform 0.3s ease;}
+
+#image1:hover {
+    transform: scale(1.1);
+}
+
+#image2:hover {
+    transform: scale(1.1);
+}
+
+#image3:hover {
+    transform: scale(1.1);
+}
+
+#image4:hover {
+    transform: scale(1.1);
+}
+
+#image5:hover {
+    transform: scale(1.1);
+}
+
+
+#footer{
+    padding-top: 300px;
+    padding-bottom: 100px;
+    text-align: left;
+}
+
+#darkblue{
+    color: #0047ab ;
+}
+
+#red{
+    color:#C41E3A
+}
+
+#header-wrapper p {
+    font-family: 'TT Norms Pro', sans-serif;
+    font-size: 30px;
+    color: #ebe7e7;
+    font-weight: 200;
+     padding-left: 150px;
+}
+
+#abouthead{
+    margin-left: 340px;
+}

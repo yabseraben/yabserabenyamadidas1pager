@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+
+    <style>
+        .hover-container {
+    position: relative;
+    cursor: url('cover.png'), auto; /* Emoji magnifying glass cursor */
+}
+
+.text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Make sure the text is above the image */
+}
+
+#cover-image {
+    width: 100%; /* Adjust to your image's width */
+    height: auto; /* Adjust to your image's height */
+    transition: opacity 0.3s ease;
+}
+
+.hover-container:hover #cover-image {
+    opacity: 0; /* Hide the image on hover */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+<div class="hover-container">
+    <div class="text-container">
+        <p id="hidden-text">IMPOSSIBLE</p>
+    </div>
+    <img src="cover.png" alt="Cover Image" id="cover-image">
+</div>
+
+</body>
+</html>
