@@ -535,6 +535,21 @@
     transform: scale(1.1); /* Zoom effect on hover */
 }
 
+        
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+#yeah span {
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
     </style>
 </head>
 <body>
