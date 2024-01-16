@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <style>
-        .hover-container {
-    position: relative;
-    cursor: url('cover.png'), auto; /* Emoji magnifying glass cursor */
+        .container5 {
+    display: flex;
+    padding: 150px;
+    box-sizing: border-box;
 }
 
-.text-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; /* Make sure the text is above the image */
+.column5 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#cover-image {
-    width: 100%; /* Adjust to your image's width */
-    height: auto; /* Adjust to your image's height */
-    transition: opacity 0.3s ease;
+.image-column5 img, .tiny-image-column5 img {
+    transition: transform 0.3s ease;
+    border-radius: 20px;
 }
 
-.hover-container:hover #cover-image {
-    opacity: 0; /* Hide the image on hover */
+.zoomable:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
+.tiny {
+    width: 80px; /* Adjust size for the tiny image */
+    height: auto;
+}
 
+.text-column5 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+      font-size: 45px; /* Adjust size as needed */
+        font-weight: 100;
+}
+
+/* Optional: Adjusting image sizes */
+.image-column5 img {
+    width: 100%; /* Adjust based on your preference */
+    height: auto;
+}
 
     </style>
 </head>
-
 <body>
 
-<div class="hover-container">
-    <div class="text-container">
-        <p id="hidden-text">IMPOSSIBLE</p>
+<div class="container5">
+    <div class="column5 image-column5">
+        <img src="pulse.jpeg" alt="Left Image" class="zoomable">
     </div>
-    <img src="cover.png" alt="Cover Image" id="cover-image">
+    <div class="column5 tiny-image-column5">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+    <div class="column5 text-column5">
+        <p>Your text goes here...</p>
+    </div>
 </div>
 
 </body>

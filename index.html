@@ -124,15 +124,32 @@
 
 
 .container {
-    display: flex;
+    display: block;
     justify-content: space-between;
-    padding: 150px; /* Padding around the entire layout */
+    padding: 100px; /* Padding around the entire layout */
+    margin-top: -250px;
+    margin-left: -10px;
+    margin-bottom: -30px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 .container img{
     width:80%;
     margin-left: 10vw;
+
+}
+
+.container2 {
+    display: block;
+    justify-content: space-between;
+    padding: 90px; /* Padding around the entire layout */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.container2 img{
+        margin-top: -80px;
+    width:100%;
+    margin-left: 8vw;
 
 }
 .column {
@@ -181,10 +198,191 @@
     transform: scale(1.05); /* Zooms in the image on hover */
 }
 
-#invis img{
-    width: 300px;
+#invis img {
+    width: 240px;
     height: auto;
-    margin-top: -100vw;
+    position: absolute;  /* Position the image absolutely within its parent */
+    top: 53%;             /* Align the top of the image with the top of the parent */
+    left: 74.7%;          /* Center the image horizontally */
+    transform: translateX(-50%); /* Adjust the horizontal position to truly center it */
+    z-index: 1;         /* Place the image on top of other elements */
+       transition: opacity 0.3s ease;
+}
+
+#invis:hover {
+    opacity: 0; /* Hide the image on hover */
+}
+
+#impossible h3 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding-bottom: 0;
+    margin-left: 5vw;
+    position: relative; /* Establish a stacking context */
+    z-index: 0;         /* Ensure the text is below the image */
+}
+
+#impossible {
+  
+    position: relative; /* Needed for absolute positioning of child elements */
+    cursor: url('mag.png'), auto; 
+}
+
+#impossible2 {
+   
+    position: relative; /* Needed for absolute positioning of child elements */
+
+}
+
+
+#impossible2 h3 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    padding-left: 250px;
+    padding-right: 250px;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding-bottom: 0;
+    margin-left: 5vw;
+    position: relative; /* Establish a stacking context */
+    z-index: 0;         /* Ensure the text is below the image */
+}
+
+#impossible22 {
+
+    position: relative; /* Needed for absolute positioning of child elements */
+
+}
+
+
+#impossible22 h3 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding-bottom: 0;
+    margin-left: 5vw;
+    position: relative; /* Establish a stacking context */
+    z-index: 0;         /* Ensure the text is below the image */
+}
+
+
+
+#confettiContainer {
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.confetti-text {
+    position: absolute;
+    font-size: 30px; /* Adjust as needed */
+    opacity: 0;
+    transition: transform 2s, opacity 2s;
+    font-family: 'TT Norms Pro', sans-serif;
+    font-weight: normal;
+}
+
+
+
+/* Animation for confetti pieces */
+@keyframes confetti-animation {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(300px) rotate(360deg); } /* Adjust as needed */
+}
+
+.confetti {
+    animation: confetti-animation 3s infinite linear;
+}
+
+.image-row {
+    display: flex; /* This makes the child elements (images) line up horizontally */
+    justify-content: space-between; /* This spaces the images evenly */
+    padding: 100px;
+}
+
+.image-row img {
+    width: 20%; /* Each image takes up approximately one-third of the row */
+    height: auto; /* This keeps the image aspect ratio intact */
+    padding: 5px; /* Optional: Adds some space around the images */
+}
+
+  .container5 {
+    display: flex;
+    padding: 150px;
+    box-sizing: border-box;
+}
+
+.column5 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-column5 img, .tiny-image-column5 img {
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+
+.zoomable:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.tiny {
+    width: 80px; /* Adjust size for the tiny image */
+    height: auto;
+}
+
+.text-column5 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+      font-size: 45px; /* Adjust size as needed */
+        font-weight: 400;
+}
+
+.text-column55 {
+    font-family: 'TT Norms Pro', sans-serif;
+    color: white;
+      font-size: 40px; /* Adjust size as needed */
+        font-weight: 400;
+        padding: 250px;
+        margin-top: -50px;
+        margin-bottom: -30px;
+}
+
+/* Optional: Adjusting image sizes */
+.image-column5 img {
+    width: 120%; /* Adjust based on your preference */
+    height: auto;
+}
+
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.gallery-image {
+    width: calc(36.33% - 100px); /* Adjust width considering padding */
+    margin: 75px; /* Half of the specified padding for even spacing */
+    border-radius: 20px;
+    box-sizing: border-box;
 }
 
     </style>
@@ -218,73 +416,47 @@
         </div>
     </div>
 
-        <div class="item4-content">
-        <div class="stuff2">
 
-            <div id="textnow">
-                <div class="text-content2">
-                    <h3>Our family didn't have much, but I deeply cherished my worn-out<span class="pulse-text"> 2004 Adidas Predator Pulsados.</span></h3>
-                </div>
-            </div>
 
-              <div id="photor2">
-                <img src="curly.png" alt="arrow">
-            </div>
 
-            <div id="photor">
-                <img src="pulse.jpeg" alt="yabi photo">
-            </div>
-
-          
-
-            
-        </div>
+<div class="container5">
+    <div class="column5 text-column5">
+        <p>Our family didn't have much, but I deeply cherished my worn-out<span class="pulse-text"> 2004 Adidas Predator Pulsados.</p>
     </div>
 
-
-       <div class="item4-content">
-            <div id="textnow">
-                <div class="text-content22">
-                       <h3>Throughout middle school, these were the shoes I eagerly laced up every chance I got to play soccer. Whether it was a 15-minute snack break, a brief 5-minute transition period, or my entire 45-minute <br>lunch, I was always playing. 
-</h3>
-<br>
-<br>
-                </div>
-            </div>
+     <div class="column5 tiny-image-column5">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+    <div class="column5 image-column5">
+        <img src="pulse.jpeg" alt="Left Image" class="zoomable">
+    </div>
+   
 </div>
+
+<div class="column5 text-column55">
+        <p>Throughout middle school, these were the shoes I eagerly laced up every chance I got to play soccer. Whether it was a 15-minute snack break, a brief 5-minute transition period, or my entire 45-minute lunch, I was always playing. </p>
+    </div>
+
 
 <img src="ball.png" alt="Ball" class="image-ball">
 
 
- <div class="item4-content">
-            <div id="textnow">
-                <div class="text-content22">
-                       <h3>Our school lacked the funding for an outdoor field, so we used a nearby school's gym, transforming the indoor space into the perfect soccer pitch for a 12-year-old's imagination. My bag, serving as our makeshift goalpost, became a symbol of luck for our little team.
+<div class="column5 text-column55">
+                       <p>Our school lacked the funding for an outdoor field, so we used a nearby school's gym, transforming the indoor space into the perfect soccer pitch for a 12-year-old's imagination. My bag, serving as our makeshift goalpost, became a symbol of luck for our little team.<br><br>
 In those moments, the lack of resources made even a full-sized soccer field seem like a distant dream. Yet, I remained dedicated to my academics and honed my soccer skills because they were the two things I loved most. 
 
-</h3>
-<br>
-<br>
-                </div>
-            </div>
+</p>
 </div>
-
 
 
     <div class="container">
             <img src="team.png" alt="Right Image">
     </div>
 
-<div class="item4-content">
-            <div id="textnow">
-                <div class="text-content22">
-                       <h3>This commitment, however, was met with challenges in a society where traditional gender roles are deeply entrenched. Neighbors and distant family members often disapproved of my involvement in sports, as I returned home with scuffed clothing and bruised feet. Despite this, I did find joy in traditional roles too, like helping my mother with cooking and cleaning. 
+<div class="column5 text-column55">
+                       <p>This commitment, however, was met with challenges in a society where traditional gender roles are deeply entrenched. Neighbors and distant family members often disapproved of my involvement in sports, as I returned home with scuffed clothing and bruised feet. Despite this, I did find joy in traditional roles too, like helping my mother with cooking and cleaning. 
 
-</h3>
-<br>
-<br>
-                </div>
-            </div>
+</p>
 </div>
 
 
@@ -294,31 +466,146 @@ In those moments, the lack of resources made even a full-sized soccer field seem
 </div>
 
 
-<div class="item4-content">
-            <div id="textnow">
-                <div class="text-content22">
-                       <h3>However, the expectation to limit myself to these tasks alone challenged my aspirations. It was within this struggle between conforming and pursuing my passion that the idea of 'impossible' started to echo loudly in my mind.
+<div id="impossible">
+                       <h3>However, the expectation to limit myself to these tasks alone challenged my aspirations. It was within this struggle between conforming and pursuing my passion that the idea of 'impossible' started to echo loudly in my mind.</h3>
 
-
-
-</h3>
-<br>
-<br>
-                </div>
-            </div>
-</div>
-
-<div id="invis">
+                       <div id="invis">
 
   <img src="cover.png" alt="Zoomable Image" class="zoomable-image">
 
 </div>
+</div>
+
+
+<div id="impossible2">
+                       <h3>It was during this struggle that I became more determined to prove the opposite, This defiance wasn't just an act of rebellion; it became my silent proclamation that barriers were meant to be broken. It was disheartening to hear that girls shouldn't be involved in sports, but in an ironic twist, it was my dedication to soccer that earned me a scholarship to a high school that would change my life.</h3>
+
+</div>
+
+<br>
+<br>
+  
+
+
+<div id="confettiContainer">
+     <div class="confetti-text" style="color: pink;">POSSIBLE</div>
+    <div class="confetti-text" style="color: orange;">POSSIBLE</div>
+    <div class="confetti-text" style="color: yellow;">POSSIBLE</div>
+    <div class="confetti-text" style="color: green;">POSSIBLE</div>
+    <div class="confetti-text" style="color: blue;">POSSIBLE</div>
+    <div class="confetti-text" style="color: indigo;">POSSIBLE</div>
+    <div class="confetti-text" style="color: violet;">POSSIBLE</div>
+    <div class="confetti"></div>
+    <!-- Repeat the above line for as many confetti pieces as you want -->
+</div>
+
+
+
+<script>
+ document.addEventListener('scroll', function() {
+    const container = document.getElementById('confettiContainer');
+    const containerRect = container.getBoundingClientRect();
+    const inView = containerRect.top >= 0 && containerRect.bottom <= window.innerHeight;
+
+    if (inView) {
+        const texts = container.querySelectorAll('.confetti-text');
+        texts.forEach(text => {
+            const x = Math.random() * (containerRect.width - text.clientWidth);
+            const y = Math.random() * (containerRect.height - text.clientHeight);
+
+            text.style.opacity = 1;
+            text.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }
+});
+
+
+
+</script>
+
+
+<div id="impossible2">
+                       <h3>Working part-time, I eventually bought my first pair of sneakers, the Adidas Superstars. These shoes carried me across my graduation stage after pursuing academic opportunities, research, and after-school activities. </h3>
+
+</div>
+
+  <div class="container2">
+            <img src="p1.png" alt="Right Image">
+                <img src="p2.png" alt="Right Image">
+    </div>
+
+<br>
+<br>
+
+<div id="impossible2">
+                       <h3>They were the heaviest shoes I'd ever worn, symbolizing the weight of my aspirations and responsibilities. While they came with me at my highest points, I also wore them to my father's funeral, a time when success seemed almost unattainable for our family of five. They were on my feet as I sat on campus at 5 am, studying hard for my IB exams, reflecting on the barriers I faced as a black woman, and reaffirming my belief that nothing is impossible.</h3>
+
+</div>
+
+
+
+<div class="container5">
+    <div class="column5 text-column5">
+        <p>My trusty <span class="pulse-text"> Adidas Superstars</span></p>
+    </div>
+
+     <div class="column5 tiny-image-column5">
+        <img src="curly.png" alt="Middle Image" class="zoomable tiny">
+    </div>
+    <div class="column5 image-column5">
+        <img src="pulse.jpeg" alt="Left Image" class="zoomable">
+    </div>
+   
+</div>
+
+<div id="impossible2">
+                       <h3>Interestingly, my feet never grew, allowing me to wear the same size shoes when I first stepped onto the campus of USC. Walking around, I carried with me not just the physical representation of my journey of hard work and determination that started with a middle school girl who dreamt of playing soccer.</h3>
+
+</div>
+
+
+
+<div class="image-row">
+    <img src="usc1.gif" alt="First Image">
+    <img src="usc2.gif" alt="Second Image">
+    <img src="usc3.jpeg" alt="Third Image">
+</div>
+
+            
+        </div>
+    </div>
+
+    <div id="impossible2">
+                       <h3>To me, impossible is intertwined in almost every step of my journey and wrapped around stitch on my shoes. Every time I faced a hurdle, whether it was societal expectations or personal loss, I reminded myself that the impossible is just a milestone waiting to be reached. This belief has been the driving force behind my ambitions!</h3>
+
+</div>
+
+<div class="gallery-container">
+    <img src="LUCY.jpeg" alt="Image 1" class="gallery-image">
+    <img src="DOZ.png" alt="Image 2" class="gallery-image">
+    <img src="COUNTRY.png" alt="Image 3" class="gallery-image">
+    <img src="ICAEE.png" alt="Image 4" class="gallery-image">
+    <img src="FINAL2.PNG" alt="Image 5" class="gallery-image">
+    <img src="USCINF.jpeg" alt="Image 6" class="gallery-image">
+</div>
+
+   <div id="impossible2">
+                       <h3>My passion for joining Adidas stems from a personal connection to the brand that shaped my formative years. Adidas has been a symbol of hope and resilience for me, right from my cherished Predator Pulsados to the Superstars that walked me through countless milestones. The brand represents more than just athletic wear; it's a testament to the power of dreams and the spirit of perseverance. </h3>
+
+</div>
+
+ <div id="impossible2">
+                       <h3>Joining Adidas would be a full-circle moment, aligning my values with a brand that has been an integral part of my journey. My passion for Adidas is fueled by the desire to inspire and empower. Just as Adidas has played a pivotal role in my life, I want to contribute to the brand's legacy of encouraging and supporting young talents, especially girls in sports. I envision using my experiences to help Adidas amplify its impact, reaching out to communities similar to mine and showing that dreams, no matter how big, can be achieved. </h3>
+
+</div>
+
+
 
 
        <div class="item4-content">
             <div id="textnow">
                 <div class="text-content22">
-                       <h3>I've always been fascinated by the intersection between <span class="highlight blue">Technology</span>, <span class="highlight purple">Data</span>, and <span class="highlight green">People</span>.
+                       <h3>Today, I have a fascination with the intersection between <span class="highlight blue">Technology</span>, <span class="highlight purple">Data</span>, and <span class="highlight green">People</span>.
 </h3><br><br>
                     <h3> Which is why I chose to delve into Marketing!</h3>
                 </div>
@@ -339,6 +626,11 @@ In those moments, the lack of resources made even a full-sized soccer field seem
         SEAMLESS- THOUGHTFUL- INSPIRE JOY
       
     </div>
+</div>
+
+ <div id="impossible2">
+                       <h3>Thats what I hope to contibute to the team! </h3>
+
 </div>
 
 
